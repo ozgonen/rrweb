@@ -265,7 +265,10 @@ const pauseAndWait = (replayer: Replayer, relativeTime: number): Promise<void> =
  * @param {number} targetTimestamp - The timestamp to capture DOM state at
  * @returns {Promise<Object>} Synthetic full snapshot at the target timestamp
  */
-async function createTrueSyntheticSnapshot(events: RRWebEvent[], targetTimestamp: number): Promise<FullSnapshotEvent> {
+export async function createTrueSyntheticSnapshot(
+  events: RRWebEvent[],
+  targetTimestamp: number
+): Promise<FullSnapshotEvent> {
   return new Promise(async (resolve, reject) => {
     let container: HTMLElement | null = null;
     let replayer: Replayer | null = null;
