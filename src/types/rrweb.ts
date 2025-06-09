@@ -61,4 +61,17 @@ export interface SnapshotOptions {
   maskAllInputs?: boolean;
   preserveWhiteSpace?: boolean;
   mirror?: any;
-} 
+}
+
+// Use a namespace to export all types and the enum together
+export namespace RRWeb {
+    export type Event = RRWebEvent;
+    export type FullSnapshotEvent = FullSnapshotEvent;
+    export type IncrementalSnapshotEvent = IncrementalSnapshotEvent;
+    export type MetaEvent = MetaEvent;
+    export type CustomEvent = CustomEvent;
+    export type PluginEvent = PluginEvent;
+    export const EventType = EventType;
+}
+
+export = RRWeb; 
