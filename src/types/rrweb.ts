@@ -1,5 +1,16 @@
 // rrweb type definitions
-import { EventType } from "rrweb";
+import * as rrweb from "rrweb";
+
+// Define EventType enum locally based on rrweb's structure
+export enum EventType {
+  DomContentLoaded = 0,
+  Load = 1,
+  FullSnapshot = 2,
+  IncrementalSnapshot = 3,
+  Meta = 4,
+  Custom = 5,
+  Plugin = 6,
+}
 
 // A generic rrweb event, since eventWithTime is not exported
 export interface RRWebEvent {
@@ -17,9 +28,6 @@ export type IncrementalSnapshotEvent = RRWebEvent & {
 export type MetaEvent = RRWebEvent & { type: EventType.Meta };
 export type CustomEvent = RRWebEvent & { type: EventType.Custom };
 export type PluginEvent = RRWebEvent & { type: EventType.Plugin };
-
-// Re-export EventType from rrweb
-export { EventType } from "rrweb";
 
 export interface RecordingStats {
   totalEvents: number;

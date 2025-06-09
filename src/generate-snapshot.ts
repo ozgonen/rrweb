@@ -8,7 +8,7 @@ import {
   EventType,
   FullSnapshotEvent,
   SnapshotOptions,
-} from "./types/rrweb";
+} from "./types/rrweb.js";
 
 // Minimal Replayer config for Node.js
 interface ReplayerConfig {
