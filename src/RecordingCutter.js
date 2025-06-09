@@ -358,6 +358,7 @@ async function createTrueSyntheticSnapshot(events, targetTimestamp) {
         inlineStylesheet: true,
         maskAllInputs: false,
         preserveWhiteSpace: true,
+        mirror: replayer.getMirror(),
       });
 
       if (!domSnapshot) {
